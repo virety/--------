@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block modal_cart %}
+{% include "includes/cart_button.html" %}
+{% endblock modal_cart %}
+    
+{% block css %}
+    <link rel="stylesheet" href="{% static 'deps/css/my_footer_css.css' %}">
+{% endblock css %}
+
+{% block content %}
+<h1 class="mt-5 pt-5" style="font-family: 'Pacifico', cursive; color:  
+#ffffff;font-size: 84px; text-shadow: 2px 2px 4px #000;  
+"><strong><span style="color: #e1ad00db;">Аленкафе</span> <br>{{content}}</strong></h1> 
+<p class="signaturestyle"><strong>Наш <span class="yellow">кофе</span> делает <br> <span class="yellow">Каждое</span> утро бодрее<br> И на 100% <span class="yellow">удачнее</span></strong></p>   
+<style>   
+    .signaturestyle {   
+        font-family: 'COMIC SANS MS', cursive;   
+        color: #ffffff;   
+        text-shadow: 2px 2px 4px #000;   
+        font-size: 34px;  
+        letter-spacing: 1px;  
+        font-weight: bold;   
+    }   
+    .yellow { 
+        color: #ffb300;  
+    } 
+    .col-lg-10 {
+        text-align: left; 
+    }
+</style> 
+{% endblock content %}
