@@ -9,11 +9,22 @@
 {% endblock css %}
 
 {% block content %}
-<div class="mt-5 pt-5 bg-white custom-shadow rounded">
-    <h2 class="mt-2 style="font-family: 'Pacifico', cursive; color:  
-    #ffffff;font-size: 84px; text-shadow: 2px 2px 4px #000;  
-    "><strong><span style="color: #e1ad00db;">Аленкафе</span> <br>{{content}}</strong></h2> 
-    <p>{{text_on_page}}</p>
+
+<div class="mt-5 pt-5 bg-white custom-shadow rounded" style="padding: 40px; border-radius: 20px; background: linear-gradient(to right, #f0f0f0, #e0e0e0); /* Более темные тона */ box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);">
+    <h2 style="font-family: 'Pacifico', cursive; color: #777; /* Серый */ font-size: 80px; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3), 0 0 2px rgba(225, 173, 0, 0.5); text-align: center;">
+        <strong style="background: linear-gradient(to right, #e1ad00db 0%, #e1ad00db 100%); /* Желтый градиент */ -webkit-background-clip: text; /* Для Chrome, Safari */
+        -webkit-text-fill-color: transparent;">{{content}}</strong>
+    </h2>
+
+    <div style="padding: 20px; border-bottom: 2px solid #ddd; margin-top: 20px; text-align: center;">  <!--  Блок с текстом, выравнивание по центру -->
+        <p style="font-size: 24px; line-height: 1.5; color: #555; /* Более темный текст */ margin-top: 10px;">
+            <strong>{{heading}}</strong>
+        </p>
+        <p style="font-size: 18px; line-height: 1.6; color: #777; /* Более темный текст */ margin-top: 10px;">
+            {{text_on_page}}
+        </p>
+    </div>
 </div>
+
 
 {% endblock content %}
