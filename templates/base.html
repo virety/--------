@@ -1,5 +1,6 @@
 {% load static %}
 {% load goods_tags %}
+{% load cache %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -37,7 +38,7 @@
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item  text-white" href="#">Доставка и оплата</a></li>
                                 <li><a class="dropdown-item  text-white" href="#">Контактная информация</a></li>
-                                <li><a class="dropdown-item  text-white" href={% url 'main:about' %}">О нас</a></li>
+                                <li><a class="dropdown-item  text-white" href="{% url "main:about" %}">О нас</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -54,7 +55,7 @@
                                 Мой профиль
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item  text-white" href="carts/cart.html">Корзина</a></li>
+                                <li><a class="dropdown-item  text-white" href="{% url "user:users_cart" %}">Корзина</a></li>
                                 <li><a class="dropdown-item  text-white" href="{% url "users:profile" %}">Личный кабинет</a>
                                 </li>
                                 {% if user.is_admin  or user.is_staff%}
@@ -88,10 +89,12 @@
                             height="16">
                     </button>
                     <ul class="dropdown-menu bg-dark" data-bs-theme="dark">
+                        {% cache 60 catalog_categories%}
                         {%tag_categories as categories%}
                         {% for category in  categories%}
                             <li><a class="dropdown-item text-white" href="{% url "catalog:index" category.slug %}">{{category.name}}</a></li>
                         {% endfor %}
+                        {% endcache %}
                     </ul>
                 </div>
                 
