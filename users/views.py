@@ -47,7 +47,7 @@ class UserLoginView(LoginView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['title'] = 'Home - Авторизация'
+        context['title'] = 'Аленкафе - Авторизация'
         return context
 
 
@@ -72,7 +72,7 @@ class UserRegistrationView(CreateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['title'] = 'Home - Регистрация'
+        context['title'] = 'Аленкафе - Регистрация'
         return context
 
 
@@ -91,7 +91,7 @@ class UserProfileView(LoginRequiredMixin, CacheMixin , UpdateView):
         return super().form_invalid(form)
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['title'] = 'Home - Кабинет'
+        context['title'] = 'Аленкафе - Кабинет'
         orders = Order.objects.filter(user=self.request.user).prefetch_related(
                 Prefetch(
                     "orderitem_set",
@@ -106,7 +106,7 @@ class UserCartView(TemplateView):
     template_name = 'users/users_cart.html'
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['title'] = 'Home - Корзина'
+        context['title'] = 'Аленкафе - Корзина'
         return context
 @login_required
 def logout(request):

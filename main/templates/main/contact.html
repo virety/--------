@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block modal_cart %}
+{% include "includes/cart_button.html" %}
+{% endblock modal_cart %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'deps/css/my_footer_css.css' %}">
+{% endblock css %}
+{% block content %}
+<div class="mt-5 pt-5 bg-white custom-shadow rounded" style="padding: 40px; border-radius: 20px; background: linear-gradient(to right, #f0f0f0, #e0e0e0); /* Более темные тона */ box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);">
+   <section data-widget-container="" data-widget-id="11" data-region="1" data-widget-type="24" data-widget-url="/widget?isDomain=1&amp;route=contacts&amp;canSort=1&amp;on_main=0&amp;type=24&amp;widget_id=11" id="contactsmain" data-block-id="11" class=" widget-sort view widget on-view widget-block">
+      <header class="infoPlate">
+         <h2 style="font-family: 'Pacifico', cursive; color: #777; /* Серый */ font-size: 80px; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3), 0 0 2px rgba(225, 173, 0, 0.5); text-align: center;">
+            <strong style="background: linear-gradient(to right, #e1ad00db 0%, #e1ad00db 100%); /* Желтый градиент */ -webkit-background-clip: text; /* Для Chrome, Safari */
+               -webkit-text-fill-color: transparent;">{{content}}</strong>
+         </h2>
+      </header>
+      <div data-ng-non-bindable="" class="content-block" id="contactsmain-show">
+         <div id="main-contacts" class="contact-list">
+            <div class="item-wrapper">
+                <p style="font-size: 24px; line-height: 1.5; color: #555; margin-top: 10px">
+                    <strong>Адрес:</strong>
+                 </p>
+               <div class="content address">
+                  <ul>
+                     <li>
+                        <span class="address-value" data-geolat="52.285847" data-geolng="104.277191" data-geozoom="19">Иркутск, ул. Российская, 14а </span> 
+                         <span class="infoDigits">(Пн-Пт: с 08-00 до 20-00, Сб-Вс: с 10-00 до 20-00) </span> <br>	
+                         				<br><iframe src="https://atlas-online.ru/contacts/showmap/1630882/1/ru_RU" id="2gismap-2" style="width:550px;height:300px;margin-bottom: 25px;" marginheight="0" marginwidth="0" frameborder="0" data-host="nethouse.ru" data-lang="ru_RU"></iframe>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="item-wrapper">
+               <p style="font-size: 24px; line-height: 1.5; color: #555; margin-top: 10px">
+                <strong>Телефоны:</strong>
+             </p>
+               <div class="content">
+                  <ul>
+                     <li>
+                        <a class="phone mobile js-phone-number__83952986-004" href="tel:83952986-004">8 (3952) 986-004</a>
+                        <span class="desktop phone js-phone-number__83952986-004">8 (3952) 986-004</span>   <span class="infoDigits">(Интернет-магазин)</span>                        
+                     </li>
+                     <li>
+                        <a class="phone mobile js-phone-number__83012704-900" href="tel:83012704-900">8 (3012) 704-900</a>
+                        <span class="desktop phone js-phone-number__83012704-900">8 (3012) 704-900</span>   <span class="infoDigits">(Улан-Удэ)</span>                        
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="item-wrapper">
+                <p style="font-size: 24px; line-height: 1.5; color: #555; margin-top: 10px">
+                    <strong>Отзывы в 2ГИС:</strong>
+                 </p>
+               <div class="content">
+                  <ul>
+                     <li><a href="https://go.2gis.com/mwcmn" target="_blank">https://go.2gis.com/mwcmn</a> <span class="infoDigits"> (Улан-Удэ, ​Проспект 50-летия Октября, 13)</span></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+</div>
+</div>
+{% endblock content %}

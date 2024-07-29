@@ -1,0 +1,238 @@
+{% extends 'base.html' %} {% load static %} 
+{% block modal_cart %}
+{% include 'includes/cart_button.html' %}
+{% endblock %} 
+{% block css %}
+<link rel="stylesheet" href="{% static 'deps/css/my_footer_css.css' %}" />
+{% endblock %}
+{% block content %}
+<div class="mt-5 pt-5 bg-white custom-shadow rounded" style="
+   padding: 40px;
+   border-radius: 20px;
+   background: linear-gradient(
+   to right,
+   #f0f0f0,
+   #e0e0e0
+   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+   ">
+   <h2 style="
+      font-family: 'Pacifico', cursive;
+      color: #777; /* Серый */
+      font-size: 80px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3),
+      0 0 2px rgba(225, 173, 0, 0.5);
+      text-align: center;
+      "><strong style="
+      background: linear-gradient(
+      to right,
+      #e1ad00db 0%,
+      #e1ad00db 100%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      ">{{ content }}</strong></h2>
+   <div style="
+      padding: 20px;
+      border-bottom: 2px solid #ddd;
+      margin-top: 20px;
+      text-align: left;
+      ">
+      <p style="font-size: 24px; line-height: 1.5; color: #555; margin-top: 10px">
+         <strong>Прием заказов на сайте – круглосуточно.<br />Заказы на самовывоз принимаются с понедельника по пятницу.<br />Доставка заказов - на следующий день с 14-00 до 18-00 с понедельника по субботу.<br />Карты клиента Аленкафе на доставку действуют при заказе от 5000 руб.</strong>
+      </p>
+      <p style="font-size: 18px; line-height: 1.6; color: #777; margin-top: 10px">
+         Заказы отправляем по предоплате в любой город транспортными компаниями СДЭК, Boxberry или Почтой России. Мы всегда рады ответить Вам по телефону на все вопросы по нашей продукции, способам оплаты и получения товаров. Работа осуществляется согласно
+         <a href="{{ site_url }}">Статье 26 Закона о защите прав потребителя "Дистанционный способ продажи товара"</a>
+         и
+         <a href="{{ site_url1 }}">Правилам продажи товаров дистанционным способом"</a>
+      </p>
+      <p style="font-size: 24px; line-height: 1.5; color: #555; margin-top: 10px">
+         <strong>КАК ОПЛАТИТЬ ЗАКАЗ?</strong>
+      </p>
+      <p style="font-size: 18px; line-height: 1.6; color: #777; margin-top: 10px">
+         &bull; Банковской картой на сайте (для заказов в Улан-Удэ оплата на сайте не действует)<br />
+         &bull; Банковской картой курьеру по терминалу<br />
+         &bull; По QR коду<br />
+         &bull; По расчетному счету (только для юр лиц)
+      </p>
+      <p style="font-size: 18px; line-height: 1.6; color: #777; margin-top: 10px">
+         <strong>Иркутск, Ангарск</strong> - наличными или картой при получении/на сайте<br />
+         <strong>Улан-Удэ</strong> – наличными или картой при получении.
+         <strong>Для заказов в Улан-Удэ оплата на сайте не действует.</strong><br />
+         <strong>Другие города</strong> – доставка осуществляется по предоплате.
+      </p>
+      <p style="font-size: 24px; line-height: 1.5; color: #555; margin-top: 10px">
+         <strong>КАКИМ СПОСОБОМ ПОЛУЧИТЬ ЗАКАЗ?</strong>
+      </p>
+      <p style="font-size: 18px; line-height: 1.6; color: #777; margin-top: 10px">
+         &bull; Самовывоз с любого магазина Aленкафе (Иркутск, Улан-Удэ)<br />
+         &bull; Доставка курьером по городам Иркутск, Ангарск, Шелехов и Улан-Удэ.<br />
+         &bull; Отправка рейсовыми автобусами по Иркутской области<br />
+         &bull; Отправка в другие города - ТК СДЭК, Почта России, постаматы PickPoint
+      </p>
+      <p style="font-size: 24px; line-height: 1.5; color: #555; margin-top: 10px">
+         <strong>УСЛОВИЯ ДОСТАВКИ</strong>
+      </p>
+      <p style="font-size: 18px; line-height: 1.6; color: #777; margin-top: 10px">
+         Доставка осуществляется на следующий день с 14-00 до 18-00 после оформления заказа.<br />
+         <strong>Иркутск</strong> – с понедельника по субботу с 14:00 до 18:00.<br />
+         <strong>Улан-Удэ</strong> - с понедельника по субботу с 14:00 до 18:00. В Улан-Удэ заказы, полученные после 20-00, доставляются через один день после заказа.<br />
+         <strong>Ангарск/Шелехов</strong> – каждый четверг с 11:00.
+         <strong>Для отправки в четверг заказ нужно оформить на сайте до 14:00 среды.</strong>
+         Если заказ необходимо отправить срочно в любой другой день, кроме четверга - обязательно укажите эту информацию в комментарии к заказу, менеджер магазина свяжется с вами дополнительно по вопросу отправки.<br />
+         <strong>Чита</strong> - по четвергам и пятницам, при этом сам заказ необходимо оформить и оплатить до 19.00 воскресенья. Отправка из Иркутска по понедельникам.
+      </p>
+      <p style="font-size: 24px; line-height: 1.5; color: #555; margin-top: 10px">
+         <strong>БЕСКОНТАКТНАЯ ДОСТАВКА</strong>
+      </p>
+      <p style="font-size: 18px; line-height: 1.6; color: #777; margin-top: 10px">Вы можете заказать бесконтактную доставку по предоплате. Курьер согласует с вами время, и оставит заказ возле двери, чтобы вы могли его забрать. Просто напишите в Комментарии к заказу – «Бесконтактная доставка», и менеджер магазина с вами свяжется для уточнения всех деталей.</p>
+      <p style="font-size: 24px; line-height: 1.5; color: #555; margin-top: 10px">
+         <strong>СТОИМОСТЬ ДОСТАВКИ</strong>
+      </p>
+      <p style="font-size: 21px; line-height: 1.5; color: #555; margin-top: 10px">
+         <strong>Для Иркутска</strong>
+      </p>
+      <p style="font-size: 18px; line-height: 1.6; color: #777; margin-top: 10px">
+         &bull;200 рублей и Бесплатно на сумму заказа от 2000 рублей - Кировский, Октябрьский, Куйбышевский р-ны (кроме предм. Марата, Предм. Радищево, м/н Зеленый, м/н Топкинский)<br />
+         &bull;200 рублей и Бесплатно на сумму заказа от 2000 рублей - Свердловский р-н, предм. Марата, предм.Радищево, м/н Зеленый, м/н Топкинский<br />
+         &bull;250 рублей и Бесплатно на сумму заказа от 2500 рублей - рп. Маркова, пос. Березовый, пос. Луговое, Байкальский тракт (до 15 км), Ленинский р-н, Иркутск-2<br />
+      </p>
+      <p style="font-size: 21px; line-height: 1.5; color: #555; margin-top: 10px">
+         <strong>Для Ангарска</strong>
+      </p>
+      <p style="font-size: 18px; line-height: 1.6; color: #777; margin-top: 10px">
+         &bull;250 рублей и Бесплатно на сумму заказа от 2000 рублей<br />
+      </p>
+      <p style="font-size: 21px; line-height: 1.5; color: #555; margin-top: 10px">
+         <strong>Для Улан-Удэ</strong>
+      </p>
+      <p style="font-size: 18px; line-height: 1.6; color: #777; margin-top: 10px">
+         &bull;200 рублей и Бесплатно на сумму заказа от 2000 рублей - Советский, Октябрьский, Железнодорожный, Левый берег<br />
+         &bull;250 рублей и Бесплатно на сумму заказа от 2000 рублей - Авиазавод
+      </p>
+      <p style="font-size: 21px; line-height: 1.5; color: #555; margin-top: 10px">
+         <strong>Для Читы</strong>
+      </p>
+      <p style="font-size: 18px; line-height: 1.6; color: #777; margin-top: 10px">&bull;1 коробка - 500 руб. Водитель созванивается с вами и передает заказ.</p>
+      <p style="font-size: 21px; line-height: 1.5; color: #555; margin-top: 10px">
+         <strong>Для других городов России</strong>
+      </p>
+      <p style="font-size: 18px; line-height: 1.6; color: #777; margin-top: 10px">Стоимость доставки по России рассчитывается индивидуально. По России осуществляем доставку транспортной компанией СДЭК, в постаматы PickPoint или Почтой России (EMS). Стоимость зависит от веса и объема отправления. Оплата перевозки производится получателем груза. При сумме заказа от 2000 рублей доставка до терминала транспортной компании или почтового отделения в Иркутске осуществляется бесплатно.</p>
+      <table id="delivery-pricelist">
+         <thead>
+            <tr>
+               <th class="infoDigits">Доставка</th>
+               <th class="infoDigits">Цена</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td class="name">САМОВЫВОЗ по адресу г. Иркутск, ул. Российская, 14а
+               </td>
+               <td class="price">
+                  0&nbsp;₽
+               </td>
+            </tr>
+            <tr>
+               <td class="name">САМОВЫВОЗ по адресу г. Иркутск, ул. Култукская, 99а/1
+               </td>
+               <td class="price">
+                  0&nbsp;₽
+               </td>
+            </tr>
+            <tr>
+               <td class="name">САМОВЫВОЗ по адресу г. Иркутск, ул. Сказочная, 6
+               </td>
+               <td class="price">
+                  0&nbsp;₽
+               </td>
+            </tr>
+            <tr>
+               <td class="name">САМОВЫВОЗ по адресу г. Улан-Удэ, ул. Хоца Намсараева, 2а
+               </td>
+               <td class="price">
+                  0&nbsp;₽
+               </td>
+            </tr>
+            <tr>
+               <td class="name">ИРКУТСК: Кировский, Октябрьский, Куйбышевский р-ны (кроме предм. Марата, Предм. Радищево, м/н Зеленый, м/н Топкинский)
+               </td>
+               <td class="price">
+                  200&nbsp;₽
+               </td>
+            </tr>
+            <tr>
+               <td class="name">ИРКУТСК: Свердловский р-н, предм.Марата, предм.Радищево, м/н Зеленый, м/н Топкинский
+               </td>
+               <td class="price">
+                  200&nbsp;₽
+               </td>
+            </tr>
+            <tr>
+               <td class="name">ИРКУТСК: рп. Маркова, пос. Березовый, пос. Луговое, Байкальский тракт (до 15 км), Ленинский р-н, Иркутск-2
+               </td>
+               <td class="price">
+                  250&nbsp;₽
+               </td>
+            </tr>
+            <tr>
+               <td class="name">ИРКУТСК: заказ больше 2000 (2500) рублей (доставка по городу БЕСПЛАТНО)
+               </td>
+               <td class="price">
+                  0&nbsp;₽
+               </td>
+            </tr>
+            <tr>
+               <td class="name">АНГАРСК/ШЕЛЕХОВ (доставка по четвергам)
+               </td>
+               <td class="price">
+                  250&nbsp;₽
+               </td>
+            </tr>
+            <tr>
+               <td class="name">АНГАРСК/ШЕЛЕХОВ (доставка по четвергам, заказ более 2000 руб) - доставка БЕСПЛАТНО
+               </td>
+               <td class="price">
+                  0&nbsp;₽
+               </td>
+            </tr>
+            <tr>
+               <td class="name">УЛАН-УДЭ: Советский, Октябрьский, Железнодорожный, Левый берег
+               </td>
+               <td class="price">
+                  200&nbsp;₽
+               </td>
+            </tr>
+            <tr>
+               <td class="name">УЛАН-УДЭ: Авиазавод
+               </td>
+               <td class="price">
+                  250&nbsp;₽
+               </td>
+            </tr>
+            <tr>
+               <td class="name">УЛАН-УДЭ: заказ больше 2000 рублей (доставка по городу БЕСПЛАТНО)
+               </td>
+               <td class="price">
+                  0&nbsp;₽
+               </td>
+            </tr>
+            <tr>
+               <td class="name">ЧИТА + доставка до города (500 руб)
+               </td>
+               <td class="price">
+                  500&nbsp;₽
+               </td>
+            </tr>
+            <tr>
+               <td class="name">ДОСТАВКА ПО РОССИИ (стоимость доставки оплачивается получателем груза)
+               </td>
+               <td class="price">
+                  0&nbsp;₽
+               </td>
+            </tr>
+         </tbody>
+      </table>
+   </div>
+</div>
+{% endblock %}
